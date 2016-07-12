@@ -16,6 +16,13 @@ class ExampleTest extends PHPUnit_Extensions_Selenium2TestCase
         $title = "It's Majax";
         $this->assertEquals($title, $this->title());
     }
+    
+      public function testTitleKO()
+    {
+        $this->url('/');
+        $title = "It's Majax false";
+        $this->assertEquals($title, $this->title());
+    }
 
     public function testSomeNavigation()
     {
